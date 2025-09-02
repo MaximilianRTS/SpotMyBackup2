@@ -1,9 +1,8 @@
 # 🎵 SpotMyBackup 2
 
-Eine moderne, webbasierte Spotify Backup-Anwendung mit Vue.js und Firebase - basierend auf dem Original [SpotMyBackup](https://github.com/secuvera/SpotMyBackup) Projekt.
+Eine moderne, webbasierte Spotify Backup-Anwendung mit Vue.js – basierend auf dem Original [SpotMyBackup](https://github.com/secuvera/SpotMyBackup) Projekt.
 
-## 🌐 [➡️ Jetzt direkt nutzen - Live-Demo](https://spotify-backup-free.web.app/)
-## 📘 [➡️ Schritt-für-Schritt Setup](https://spotify-backup-free.web.app/setup)
+<a href="https://spotify-backup-free.web.app/" style="display:inline-block;background:#1DB954;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600;">➡️ Live Webseite</a>
 
 **Die App ist bereits live und einsatzbereit! Keine Installation erforderlich.**
 
@@ -14,7 +13,6 @@ Eine moderne, webbasierte Spotify Backup-Anwendung mit Vue.js und Firebase - bas
 - **Vue.js 3** mit Composition API
 - **TypeScript** für bessere Code-Qualität
 - **Tailwind CSS** für modernes Design
-- **Firebase** für Hosting und Analytics
 - **Vite** für schnelle Entwicklung
 
 ## ✨ Features
@@ -43,31 +41,13 @@ cd SpotMyBackup2
 npm install
 ```
 
-### Umgebungsvariablen konfigurieren
+### Konfiguration
 
-Kopiere die Beispiel-Konfiguration und fülle sie aus:
+Für die Nutzung der App ist keine `.env` erforderlich.
 
-```bash
-cp env.example .env
-```
-
-Bearbeite die `.env` Datei mit deinen Firebase- und Spotify-Konfigurationen:
-
-```env
-# Firebase Configuration
-VITE_FIREBASE_API_KEY=your_firebase_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
-VITE_FIREBASE_APP_ID=1:123456789:web:abcdef123456
-
-# Spotify Configuration
-VITE_SPOTIFY_CLIENT_ID=your_spotify_client_id
-
-# App Configuration
-VITE_APP_URL=https://your-domain.com
-```
+- Die Spotify Client ID wird direkt in der Anwendung auf der Seite „Setup“ eingegeben und lokal im Browser gespeichert (z. B. `localStorage`).
+- Es werden keine geheimen Schlüssel benötigt, da die Authorisierung über OAuth 2.0 mit PKCE erfolgt.
+- Optional für lokale Entwicklung: Du kannst eine `VITE_APP_URL` setzen, ist jedoch nicht zwingend notwendig.
 
 ### Entwicklungsserver starten
 
@@ -96,12 +76,6 @@ npm run lint
 
 # Type Checking
 npm run type-check
-
-# Firebase Functions lokal testen
-npm run firebase:serve
-
-# Firebase deployen
-npm run firebase:deploy
 ```
 
 ### Projektstruktur
@@ -127,27 +101,11 @@ SpotMyBackup2/
 1. Gehe zum [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
 2. Erstelle eine neue App
 3. Setze die Redirect URI auf `{deine_domain}/callback`
-4. Kopiere die Client ID in deine `.env` Datei
-
-### Firebase Setup
-
-1. Erstelle ein neues Firebase-Projekt unter [Firebase Console](https://console.firebase.google.com)
-2. Aktiviere Firebase Hosting
-3. Kopiere die Konfigurationsdaten in deine `.env` Datei
+4. Öffne in der Anwendung die Seite „Setup“ und trage dort deine Client ID ein (sie wird lokal im Browser gespeichert)
 
 ## 🚀 Deployment
 
-### Firebase Hosting
-
-```bash
-# Build erstellen
-npm run build
-
-# Firebase deployen
-firebase deploy
-```
-
-### Manuelles Hosting
+### Statisches Hosting (beliebiger Host)
 
 ```bash
 # Build erstellen
@@ -205,7 +163,6 @@ Bei Problemen oder Fragen:
 
 - **[secuvera/SpotMyBackup](https://github.com/secuvera/SpotMyBackup)** - Das ursprüngliche Projekt, das die Inspiration für diese moderne Neuimplementierung war
 - [Vue.js](https://vuejs.org/) - Progressive JavaScript Framework
-- [Firebase](https://firebase.google.com/) - Backend-as-a-Service
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-First CSS Framework
 - [Spotify Web API](https://developer.spotify.com/documentation/web-api/) - Musik-API
 

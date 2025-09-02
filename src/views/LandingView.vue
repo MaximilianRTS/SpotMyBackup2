@@ -196,7 +196,7 @@
               🚀 Jetzt starten
             </router-link>
             <a 
-              href="https://github.com/username/myspotbackup-2.0" 
+              href="https://github.com/MaximilianRTS/SpotMyBackup2" 
               target="_blank" 
               rel="noopener noreferrer"
               class="btn-secondary text-lg px-8 py-4"

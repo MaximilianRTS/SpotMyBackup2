@@ -37,12 +37,12 @@
               🚀 Jetzt starten
             </router-link>
             <a 
-              href="https://gitlab.com/your-username/spotmybackup-2" 
+              href="https://github.com/MaximilianRTS/SpotMyBackup2" 
               target="_blank" 
               rel="noopener noreferrer"
               class="text-text-secondary hover:text-text transition-colors"
             >
-              GitLab
+              GitHub Projekt
             </a>
             
             
@@ -86,12 +86,12 @@
               🚀 Jetzt starten
             </router-link>
             <a 
-              href="https://gitlab.com/your-username/spotmybackup-2" 
+              href="https://github.com/MaximilianRTS/SpotMyBackup2" 
               target="_blank" 
               rel="noopener noreferrer"
               class="text-text-secondary hover:text-text transition-colors"
             >
-              GitLab
+              GitHub Projekt
             </a>
           </div>
         </div>
@@ -115,9 +115,9 @@
               100% kostenlos, keine Datenspeicherung, moderne Web-App.
             </p>
             <div class="flex space-x-4">
-              <a href="https://gitlab.com/your-username/spotmybackup-2" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-text transition-colors" title="GitLab Repository">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.955 13.587l-1.342-4.135-2.664-8.189c-.135-.423-.73-.423-.866 0L16.387 9.45H7.613L5.917 1.263c-.135-.423-.73-.423-.866 0L2.387 9.45 1.045 13.587c-.121.375.014.789.331 1.023L12 23.054l10.624-8.443c.318-.235.453-.647.331-1.024"/>
+              <a href="https://github.com/MaximilianRTS/SpotMyBackup2" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-text transition-colors" title="GitHub Repository">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.395 7.86 10.914.575.106.786-.249.786-.554 0-.274-.01-1.001-.015-1.965-3.197.695-3.873-1.541-3.873-1.541-.523-1.329-1.277-1.682-1.277-1.682-1.043-.713.079-.699.079-.699 1.154.081 1.762 1.185 1.762 1.185 1.026 1.76 2.692 1.251 3.349.956.104-.743.402-1.251.73-1.538-2.552-.29-5.236-1.276-5.236-5.68 0-1.255.449-2.281 1.185-3.086-.119-.29-.513-1.458.112-3.04 0 0 .965-.309 3.164 1.178.918-.255 1.903-.383 2.884-.387.98.004 1.966.132 2.885.387 2.197-1.487 3.161-1.178 3.161-1.178.626 1.582.232 2.75.114 3.04.738.805 1.184 1.83 1.184 3.086 0 4.414-2.688 5.387-5.251 5.673.414.357.782 1.062.782 2.141 0 1.544-.014 2.786-.014 3.165 0 .307.207.667.792.553C20.213 21.39 23.5 17.083 23.5 12c0-6.352-5.148-11.5-11.5-11.5z" clip-rule="evenodd"/>
                 </svg>
               </a>
               <a href="mailto:maximilianrts@proton.me" class="text-text-secondary hover:text-text transition-colors" title="E-Mail Kontakt">
