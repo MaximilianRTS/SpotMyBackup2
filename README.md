@@ -33,8 +33,8 @@ Eine moderne, webbasierte Spotify Backup-Anwendung mit Vue.js und Firebase - bas
 ### Repository klonen
 
 ```bash
-git clone https://github.com/your-username/spotmybackup-2.git
-cd spotmybackup-2
+git clone https://github.com/MaximilianRTS/SpotMyBackup2.git
+cd SpotMyBackup2
 ```
 
 ### Dependencies installieren
@@ -107,7 +107,7 @@ npm run firebase:deploy
 ### Projektstruktur
 
 ```
-spotmybackup-2/
+SpotMyBackup2/
 ├── src/                    # Vue.js Anwendung
 │   ├── components/         # Vue Komponenten
 │   ├── views/             # Seiten/Views
@@ -198,7 +198,7 @@ Dieses Projekt steht unter der MIT Lizenz. Siehe [LICENSE](LICENSE) für Details
 
 Bei Problemen oder Fragen:
 
-- Erstelle ein [GitHub Issue](https://github.com/your-username/spotmybackup-2/issues)
+- Erstelle ein [GitHub Issue](https://github.com/MaximilianRTS/SpotMyBackup2/issues)
 - Kontaktiere mich per E-Mail: maximilianrts@proton.me
 
 ## 🙏 Danksagungen
