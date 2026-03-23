@@ -107,15 +107,16 @@ export const useAuthStore = defineStore('auth', () => {
     }
 
     try {
+      // PKCE flow: no client_secret → send client_id in body, no Authorization header
       const response = await fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': `Basic ${btoa(`${clientId.value}:`)}`
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: new URLSearchParams({
           grant_type: 'refresh_token',
-          refresh_token: state.value.refreshToken
+          refresh_token: state.value.refreshToken,
+          client_id: clientId.value
         })
       })
 
@@ -124,11 +125,17 @@ export const useAuthStore = defineStore('auth', () => {
       }
 
       const data = await response.json()
-      setTokens(data.access_token, state.value.refreshToken, data.expires_in)
-      
+      // Handle refresh token rotation: Spotify may return a new refresh_token
+      const newRefreshToken = data.refresh_token || state.value.refreshToken
+      setTokens(data.access_token, newRefreshToken, data.expires_in)
+
       // Update localStorage
       localStorage.setItem('spotify_access_token', data.access_token)
       localStorage.setItem('spotify_expires_at', state.value.expiresAt!.toString())
+      if (data.refresh_token) {
+        localStorage.setItem('spotify_refresh_token', data.refresh_token)
+      }
+
 
       return true
     } catch (error) {

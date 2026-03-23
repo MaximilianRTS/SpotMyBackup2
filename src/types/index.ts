@@ -26,8 +26,11 @@ export interface SpotifyPlaylist {
     id: string
     display_name: string
   }
+  // tracks.total comes from the playlist list endpoint;
+  // tracks.items is populated after fetching playlist tracks separately
   tracks: {
     total: number
+    items?: SpotifyTrack[]
   }
   images: SpotifyImage[]
   external_urls: {
@@ -42,6 +45,7 @@ export interface SpotifyTrack {
   album: SpotifyAlbum
   duration_ms: number
   explicit: boolean
+  added_at?: string
   external_urls: {
     spotify: string
   }

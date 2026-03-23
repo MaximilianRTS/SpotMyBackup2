@@ -11,10 +11,25 @@
               in 3 einfachen Schritten
             </h1>
             
-            <p class="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
-              100% kostenlos • Keine Datenspeicherung • Einfache Bedienung • 
+            <p class="text-xl text-text-secondary mb-6 max-w-2xl mx-auto">
+              App kostenlos • Keine Datenspeicherung • Einfache Bedienung •
               Alle Playlists & Favoriten • Mobile-optimiert
             </p>
+
+            <!-- Spotify Premium Notice Banner -->
+            <div class="inline-flex items-center gap-3 bg-warning/10 border border-warning/40 text-warning rounded-xl px-5 py-3 mb-8 text-sm font-medium">
+              <span class="text-lg">⚠️</span>
+              <span>
+                <strong>Spotify Premium Account erforderlich</strong> —
+                Die Spotify Web API setzt einen aktiven Premium-Account voraus.
+                <a
+                  href="https://developer.spotify.com/documentation/web-api"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline opacity-80 hover:opacity-100 ml-1"
+                >Mehr erfahren</a>
+              </span>
+            </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <router-link to="/setup" class="btn-primary text-lg px-8 py-4 text-shadow-lg glow-primary">
@@ -30,10 +45,10 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             <div class="card animate-slide-up" style="animation-delay: 0.1s">
               <div class="text-3xl mb-4">✨</div>
-              <h3 class="card-title">100% kostenlos</h3>
+              <h3 class="card-title">App kostenlos</h3>
               <p class="card-description">
-                Keine versteckten Kosten, keine Abonnements. 
-                Für immer kostenlos nutzbar.
+                Diese App ist und bleibt kostenlos — kein Abo, keine Kosten.
+                Ein Spotify Premium Account wird jedoch vorausgesetzt.
               </p>
             </div>
 

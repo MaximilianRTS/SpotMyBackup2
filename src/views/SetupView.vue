@@ -34,6 +34,23 @@
           </div>
 
           <div class="space-y-6">
+            <!-- Spotify Premium Notice -->
+            <div class="flex items-start gap-3 bg-warning/10 border border-warning/40 rounded-lg p-4">
+              <span class="text-xl flex-shrink-0">⚠️</span>
+              <div class="text-sm">
+                <p class="font-semibold text-text mb-1">Spotify Premium Account erforderlich</p>
+                <p class="text-text-secondary">
+                  Die Spotify Web API setzt seit 2024 einen aktiven Premium-Account voraus. Free-Accounts können diese App leider nicht verwenden.
+                  <a
+                    href="https://developer.spotify.com/documentation/web-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary-400 hover:text-primary-300 underline ml-1"
+                  >Spotify Docs</a>
+                </p>
+              </div>
+            </div>
+
             <!-- Instructions -->
             <div class="bg-accent-800/50 border border-accent-600 rounded-lg p-6">
               <h3 class="text-lg font-semibold text-text mb-4">📋 Anleitung:</h3>

@@ -74,9 +74,10 @@ export const useBackupStore = defineStore('backup', () => {
     return response.json()
   }
 
-  const fetchUserPlaylists = async (accessToken: string, userId: string): Promise<SpotifyPlaylist[]> => {
+  // GET /v1/me/playlists – replaces deprecated GET /v1/users/{id}/playlists (removed Nov 2024)
+  const fetchUserPlaylists = async (accessToken: string): Promise<SpotifyPlaylist[]> => {
     const playlists: SpotifyPlaylist[] = []
-    let url = `https://api.spotify.com/v1/users/${userId}/playlists?limit=50`
+    let url = 'https://api.spotify.com/v1/me/playlists?limit=50'
 
     while (url) {
       const response = await fetch(url, {
@@ -86,7 +87,8 @@ export const useBackupStore = defineStore('backup', () => {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to fetch playlists')
+        const errorData = await response.json().catch(() => ({}))
+        throw new Error(errorData.error?.message || 'Failed to fetch playlists')
       }
 
       const data = await response.json()
@@ -97,9 +99,12 @@ export const useBackupStore = defineStore('backup', () => {
     return playlists
   }
 
+  // GET /v1/playlists/{id}/items – replaces deprecated GET /v1/playlists/{id}/tracks
+  // Note: only accessible for playlists owned by or collaborated with the current user
+  // Max limit is 50 (not 100)
   const fetchPlaylistTracks = async (accessToken: string, playlistId: string): Promise<SpotifyTrack[]> => {
     const tracks: SpotifyTrack[] = []
-    let url = `https://api.spotify.com/v1/playlists/${playlistId}/tracks?limit=100`
+    let url = `https://api.spotify.com/v1/playlists/${playlistId}/items?limit=50`
 
     while (url) {
       const response = await fetch(url, {
@@ -168,8 +173,8 @@ export const useBackupStore = defineStore('backup', () => {
       setBackupProgress(10)
       setCurrentOperation('Lade Playlists...')
 
-      // Fetch user playlists
-      const playlists = await fetchUserPlaylists(accessToken, user.id)
+      // Fetch user playlists via /v1/me/playlists (current user)
+      const playlists = await fetchUserPlaylists(accessToken)
       setBackupProgress(30)
 
       // Fetch tracks for each playlist

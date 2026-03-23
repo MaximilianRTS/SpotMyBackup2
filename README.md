@@ -6,6 +6,13 @@ Eine moderne, webbasierte Spotify Backup-Anwendung mit Vue.js – basierend auf 
 
 **Die App ist bereits live und einsatzbereit! Keine Installation erforderlich.**
 
+> [!IMPORTANT]
+> **Spotify Premium Account erforderlich**
+> Spotify setzt seit November 2024 voraus, dass du einen aktiven **Spotify Premium Account** besitzt, um einen Developer Account im [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) zu erstellen und die Web API nutzen zu können.
+> Dies betrifft sowohl das **Exportieren** als auch das **Importieren** von Playlists.
+> Free-Accounts können die API und damit diese App **nicht** verwenden.
+> Weitere Infos: [Spotify Web API Changelog](https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api)
+
 ## 📖 Über dieses Projekt
 
 **SpotMyBackup 2** ist eine moderne Neuimplementierung des ursprünglichen [SpotMyBackup](https://github.com/secuvera/SpotMyBackup) Projekts von [secuvera](https://github.com/secuvera). Das Original-Projekt wurde archiviert und wird nicht mehr weiterentwickelt. Diese Version bringt das Konzept in die moderne Web-Entwicklung mit:
@@ -17,7 +24,7 @@ Eine moderne, webbasierte Spotify Backup-Anwendung mit Vue.js – basierend auf 
 
 ## ✨ Features
 
-- **100% kostenlos** - Keine versteckten Kosten oder Abonnements
+- **App 100% kostenlos** - Diese App hat keine versteckten Kosten. Ein **Spotify Premium Account** ist jedoch Voraussetzung für die API-Nutzung.
 - **Keine Datenspeicherung** - Alle Daten werden nur in deinem Browser verarbeitet
 - **Einfache Bedienung** - Schritt-für-Schritt Anleitung für technisch unerfahrene Nutzer
 - **Alle Playlists & Favoriten** - Exportiere alle deine Spotify-Daten
@@ -146,7 +153,7 @@ Wir freuen uns über Beiträge! Bitte:
 2. Erstelle einen Feature Branch (`git checkout -b feature/amazing-feature`)
 3. Committe deine Änderungen (`git commit -m 'Add amazing feature'`)
 4. Pushe zum Branch (`git push origin feature/amazing-feature`)
-5. Öffne eine Merge Request
+5. Öffne einen Pull Request
 
 ## 📄 Lizenz
 
