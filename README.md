@@ -7,11 +7,17 @@ Eine moderne, webbasierte Spotify Backup-Anwendung mit Vue.js – basierend auf 
 **Die App ist bereits live und einsatzbereit! Keine Installation erforderlich.**
 
 > [!IMPORTANT]
-> **Spotify Premium Account erforderlich**
-> Spotify setzt seit November 2024 voraus, dass du einen aktiven **Spotify Premium Account** besitzt, um einen Developer Account im [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) zu erstellen und die Web API nutzen zu können.
-> Dies betrifft sowohl das **Exportieren** als auch das **Importieren** von Playlists.
-> Free-Accounts können die API und damit diese App **nicht** verwenden.
-> Weitere Infos: [Spotify Web API Changelog](https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api)
+> **Spotify Premium Account erforderlich – wichtige Einschränkungen (Stand: Februar 2026)**
+> 
+> Seit dem **11. Februar 2026** gelten neue Regeln für Spotify Developer Apps im Development Mode:
+> 
+> - **Spotify Premium Account** ist Pflicht – sowohl für Entwickler als auch für alle Nutzer der App
+> - Jede App im Development Mode ist auf **maximal 5 autorisierte Nutzer** begrenzt
+> - Dies betrifft sowohl das **Exportieren** als auch das **Importieren** von Playlists
+> 
+> **Was das bedeutet:** Die gehostete Live-Version (`spotify-backup-free.web.app`) kann daher nur von Nutzern verwendet werden, die vom App-Entwickler explizit im Spotify Developer Dashboard hinzugefügt wurden – **oder** du hostest deine eigene Instanz mit deiner eigenen Spotify App.
+> 
+> Weitere Infos: [Spotify Developer Blog – Februar 2026](https://developer.spotify.com/blog/2026-02-06-update-on-developer-access-and-platform-security)
 
 ## 📖 Über dieses Projekt
 
